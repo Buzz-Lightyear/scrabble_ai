@@ -1,4 +1,5 @@
 #Arthur
+
 ##A Scrabble AI server written in Python
 - Refer [Game Server Repo](http://goga.bsprague.com/bsprague/scrabble) for documentation for game flow.
 
