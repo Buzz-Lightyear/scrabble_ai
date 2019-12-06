@@ -3,11 +3,10 @@ import random
 from scrabble_ai.src.utils import Utils
 
 class ScrabbleBoard:
-    def __init__(self):
+    def __init__(self, dictionary=None):
         self.rows = 15
         self.cols = 15
         self.board = [['_' for _ in range(self.cols)] for _ in range(self.rows)]
-        self.multiplier = [[1 for _ in range(self.cols)] for _ in range(self.rows)]
         self.letter_points = {
             'a': 1,
             'e': 1,
@@ -36,6 +35,7 @@ class ScrabbleBoard:
             'q': 10,
             'z': 10,
         }
+        self.dictionary = dictionary
 
     def make_first_move(self, tiles, dictionary):
         """
