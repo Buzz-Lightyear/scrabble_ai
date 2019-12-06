@@ -5,8 +5,12 @@ from scrabble_ai.src.scrabble_board import ScrabbleBoard
 
 app = Flask(__name__)
 
-with open('static/dict.txt', 'r') as f:
-    DICTIONARY = set([item[:-2] for item in f.readlines()])
+def initialize_server():
+    with open('static/dict.txt', 'r') as f:
+        DICTIONARY = set([item[:-2] for item in f.readlines()])
+    return ScrabbleBoard(dictionary=DICTIONARY)
+
+board = initialize_server()
 
 @app.route("/move", methods=['POST'])
 def make_move_post():
@@ -15,11 +19,6 @@ def make_move_post():
 @app.route("/", methods=['POST'])
 def make_move():
     input = request.json
-    if not input:
-        raise Exception('POST request needs a body')
-
-    scrabble_board = ScrabbleBoard(dictionary=DICTIONARY)
-
     return  jsonify({
                 "action": "move",
                 "move": {

@@ -36,8 +36,19 @@ class ScrabbleBoard:
             'z': 10,
         }
         self.dictionary = dictionary
+        self.premium_tiles = self.set_premium_tiles()
 
-    def make_first_move(self, tiles, dictionary):
+    def set_premium_tiles(self):
+        set1 = [(i, i) for i in range(15)]
+        set2 = [(i, 14-i) for i in range(15)]
+        set3 = [(3, 0), (7, 0), (11, 0), (3, 14), (7, 14), (11, 14)]
+        set4 = [(j, i) for (i, j) in set3]
+        set5 = [(5, 1), (6, 2), (7, 3), (8, 2), (9, 1), (5, 13), (6, 12), (7, 11), (8, 12), (9, 13)]
+        set6 = [(j, i) for (i, j) in set5]
+
+        return set(set1 + set2 + set3 + set4 + set5 + set6)
+
+    def make_first_move(self, tiles):
         """
         Given tiles, make first move
         :param tiles:
@@ -46,7 +57,7 @@ class ScrabbleBoard:
         all_subsets = Utils.get_all_subsets(tiles)
         all_subsets.sort(key=len, reverse=True)
         for subset in all_subsets:
-            all_valid_permutations = Utils.get_all_valid_permutations(subset, dictionary)
+            all_valid_permutations = Utils.get_all_valid_permutations(subset, self.dictionary)
             if all_valid_permutations:
                 return all_valid_permutations[-1]
 
