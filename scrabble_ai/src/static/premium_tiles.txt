@@ -1,0 +1,79 @@
+{
+		// Top-left to bottom-right
+		Loc{0, 0}: TripleWord,
+		Loc{1, 1}: DoubleWord,
+		Loc{2, 2}: DoubleWord,
+		Loc{3, 3}: DoubleWord,
+		Loc{4, 4}: DoubleWord,
+		Loc{5, 5}: TripleLetter,
+		Loc{6, 6}: DoubleLetter,
+		// Center isn't a premium square.
+		Loc{8, 8}:   DoubleLetter,
+		Loc{9, 9}:   TripleLetter,
+		Loc{10, 10}: DoubleWord,
+		Loc{11, 11}: DoubleWord,
+		Loc{12, 12}: DoubleWord,
+		Loc{13, 13}: DoubleWord,
+		Loc{14, 14}: TripleWord,
+
+		// Bottom-left to top-right
+		Loc{0, 14}: TripleWord,
+		Loc{1, 13}: DoubleWord,
+		Loc{2, 12}: DoubleWord,
+		Loc{3, 11}: DoubleWord,
+		Loc{4, 10}: DoubleWord,
+		Loc{5, 9}:  TripleLetter,
+		Loc{6, 8}:  DoubleLetter,
+		// Center isn't a premium square.
+		Loc{8, 6}:  DoubleLetter,
+		Loc{9, 5}:  TripleLetter,
+		Loc{10, 4}: DoubleWord,
+		Loc{11, 3}: DoubleWord,
+		Loc{12, 2}: DoubleWord,
+		Loc{13, 1}: DoubleWord,
+		Loc{14, 0}: TripleWord,
+
+		// Around the border
+		// Top
+		Loc{3, 0}:  DoubleLetter,
+		Loc{7, 0}:  TripleWord,
+		Loc{11, 0}: DoubleLetter,
+		// Bottom
+		Loc{3, 14}:  DoubleLetter,
+		Loc{7, 14}:  TripleWord,
+		Loc{11, 14}: DoubleLetter,
+		// Left
+		Loc{0, 3}:  DoubleLetter,
+		Loc{0, 7}:  TripleWord,
+		Loc{0, 11}: DoubleLetter,
+		// Right
+		Loc{14, 3}:  DoubleLetter,
+		Loc{14, 7}:  TripleWord,
+		Loc{14, 11}: DoubleLetter,
+
+		// V's around the border
+		// Top
+		Loc{5, 1}: TripleLetter,
+		Loc{6, 2}: DoubleLetter,
+		Loc{7, 3}: DoubleLetter,
+		Loc{8, 2}: DoubleLetter,
+		Loc{9, 1}: TripleLetter,
+		// Bottom
+		Loc{5, 13}: TripleLetter,
+		Loc{6, 12}: DoubleLetter,
+		Loc{7, 11}: DoubleLetter,
+		Loc{8, 12}: DoubleLetter,
+		Loc{9, 13}: TripleLetter,
+		// Left
+		Loc{1, 5}: TripleLetter,
+		Loc{2, 6}: DoubleLetter,
+		Loc{3, 7}: DoubleLetter,
+		Loc{2, 8}: DoubleLetter,
+		Loc{1, 9}: TripleLetter,
+		// Right
+		Loc{13, 5}: TripleLetter,
+		Loc{12, 6}: DoubleLetter,
+		Loc{11, 7}: DoubleLetter,
+		Loc{12, 8}: DoubleLetter,
+		Loc{13, 9}: TripleLetter,
+	}

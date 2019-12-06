@@ -15,7 +15,15 @@ def make_move():
     if not input:
         raise Exception('POST request needs a body')
 
-    return jsonify({'key': 'value'})
+    return  jsonify({
+                "action": "move",
+                "move": {
+                    "word": "cape",
+                    "x": 7,
+                    "y": 7,
+                    "orientation": "vertical",
+                },
+         })
 
 if __name__=='__main__':
     app.run(debug=True)
